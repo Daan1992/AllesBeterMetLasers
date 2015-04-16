@@ -21,4 +21,8 @@ public:
 
 	Intensity getPixel(int x, int y) const;
 	Intensity getPixel(int i) const;
+private:
+	const float redConversionGrade = 0.30;
+	const float greenConversionGrade = 0.59;
+	const float blueConversionGrade = 0.11;
 };
