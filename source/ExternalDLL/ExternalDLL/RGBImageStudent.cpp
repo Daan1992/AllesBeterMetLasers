@@ -48,7 +48,7 @@ RGB RGBImageStudent::getPixel(int x, int y) const {
 }
 
 RGB RGBImageStudent::getPixel(int i) const {
-	if (i < imgVector.size()){
+	if ((unsigned int)i < imgVector.size()){
 		return imgVector.at(i);
 	}
 	return 0;

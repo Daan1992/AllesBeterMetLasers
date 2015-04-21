@@ -1,75 +1,86 @@
 #include "IntensityImageStudent.h"
 
 IntensityImageStudent::IntensityImageStudent() : IntensityImage() {
-	int throwError = 0, e = 1 / throwError; //Throws error without the need to include a header
-	//TODO: Nothing
+	intensityVector.resize(0);
 }
 
-IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other) : IntensityImage(other.getWidth(), other.getHeight()) {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: Create a copy from the other object
+IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other) 
+	: IntensityImage(other.getWidth(), other.getHeight()) {
+	intensityVector.resize(other.getWidth() * other.getHeight());
+	for (unsigned i = 0; i < intensityVector.size(); i++) {
+		intensityVector.at(i) = other.getPixel(i);
+	}
 }
 
-IntensityImageStudent::IntensityImageStudent(const int width, const int height) : IntensityImage(width, height) {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: Initialize pixel storage
+IntensityImageStudent::IntensityImageStudent(const RGBImageStudent &RGB) 
+	: IntensityImage(RGB.getWidth(), RGB.getHeight()) {
+	intensityVector.resize(RGB.getWidth() * RGB.getHeight());
+	for (unsigned i = 0; i < intensityVector.size(); i++) {
+		intensityVector.at(i) = static_cast<unsigned char>(
+			RGB.getPixel(i).r * redConversionGrade
+			+ RGB.getPixel(i).g * greenConversionGrade
+			+ RGB.getPixel(i).b * blueConversionGrade);
+	}
+}
+
+IntensityImageStudent::IntensityImageStudent(const int width, const int height) 
+	: IntensityImage(width, height) {
+	intensityVector.resize(width * height);
 }
 
 IntensityImageStudent::~IntensityImageStudent() {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: delete allocated objects
+	intensityVector.~vector();
 }
 
 void IntensityImageStudent::set(const int width, const int height) {
 	IntensityImage::set(width, height);
-	int throwError = 0, e = 1 / throwError;
-	//TODO: resize or create a new pixel storage (Don't forget to delete the old storage)
+	intensityVector.resize(width * height);
 }
 
 void IntensityImageStudent::set(const IntensityImageStudent &other) {
 	IntensityImage::set(other.getWidth(), other.getHeight());
-	int throwError = 0, e = 1 / throwError;
-	//TODO: resize or create a new pixel storage and copy the object (Don't forget to delete the old storage)
+	intensityVector.resize(other.getWidth() * other.getHeight());
+	for (unsigned i = 0; i < intensityVector.size(); i++) {
+		intensityVector.at(i) = other.getPixel(i);
+	}
+}
+
+void IntensityImageStudent::set(const RGBImageStudent &RGB) {
+	IntensityImage::set(RGB.getWidth(), RGB.getHeight());
+	intensityVector.resize(RGB.getWidth() * RGB.getHeight());
+	for (unsigned i = 0; i < intensityVector.size(); i++) {
+		intensityVector.at(i) = static_cast<unsigned char>(
+			RGB.getPixel(i).r * redConversionGrade
+			+ RGB.getPixel(i).g * greenConversionGrade 
+			+ RGB.getPixel(i).b * blueConversionGrade);
+	}
 }
 
 void IntensityImageStudent::setPixel(int x, int y, Intensity pixel) {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: no comment needed :)
+	intensityVector.at(y * width + x) = pixel;
 }
 
 void IntensityImageStudent::setPixel(int i, Intensity pixel) {
-	int throwError = 0, e = 1 / throwError;
-	/*
-	* TODO: set pixel i in "Row-Major Order"
-	*
-	*
-	* Original 2d image (values):
-	* 9 1 2
-	* 4 3 5
-	* 8 7 8
-	*
-	* 1d representation (i, value):
-	* i		value
-	* 0		9
-	* 1		1
-	* 2		2
-	* 3		4
-	* 4		3
-	* 5		5
-	* 6		8
-	* 7		7
-	* 8		8
-	*/
+	intensityVector.at(i) = pixel;
+}
+
+void IntensityImageStudent::setPixel(int i, RGB pixel) {
+	intensityVector.at(i) = static_cast<unsigned char>(
+		pixel.r * redConversionGrade
+		+ pixel.g * greenConversionGrade 
+		+ pixel.b * blueConversionGrade);
 }
 
 Intensity IntensityImageStudent::getPixel(int x, int y) const {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: no comment needed :)
+	if (x <= width && y <= height) {
+		return intensityVector.at(y * width + x);
+	}
 	return 0;
 }
 
 Intensity IntensityImageStudent::getPixel(int i) const {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: see setPixel(int i, RGB pixel)
+	if ((unsigned int)i < intensityVector.size()){
+		return intensityVector.at(i);
+	}
 	return 0;
 }
