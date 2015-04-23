@@ -2,8 +2,8 @@
 #include "IntensityImageStudent.h"
 
 IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &image) const {
-	
-	return &IntensityImageStudent(image);
+	IntensityImageStudent iImage = IntensityImageStudent(image);
+	return &iImage;
 }
 
 IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &image) const {
