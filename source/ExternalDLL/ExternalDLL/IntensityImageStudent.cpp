@@ -12,7 +12,7 @@ IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other)
 	}
 }
 
-IntensityImageStudent::IntensityImageStudent(const RGBImageStudent &RGB) 
+IntensityImageStudent::IntensityImageStudent(const RGBImage &RGB) 
 	: IntensityImage(RGB.getWidth(), RGB.getHeight()) {
 	intensityVector.resize(RGB.getWidth() * RGB.getHeight());
 	for (unsigned i = 0; i < intensityVector.size(); i++) {
@@ -45,30 +45,12 @@ void IntensityImageStudent::set(const IntensityImageStudent &other) {
 	}
 }
 
-void IntensityImageStudent::set(const RGBImageStudent &RGB) {
-	IntensityImage::set(RGB.getWidth(), RGB.getHeight());
-	intensityVector.resize(RGB.getWidth() * RGB.getHeight());
-	for (unsigned i = 0; i < intensityVector.size(); i++) {
-		intensityVector.at(i) = static_cast<unsigned char>(
-			RGB.getPixel(i).r * redConversionGrade
-			+ RGB.getPixel(i).g * greenConversionGrade 
-			+ RGB.getPixel(i).b * blueConversionGrade);
-	}
-}
-
 void IntensityImageStudent::setPixel(int x, int y, Intensity pixel) {
 	intensityVector.at(y * width + x) = pixel;
 }
 
 void IntensityImageStudent::setPixel(int i, Intensity pixel) {
 	intensityVector.at(i) = pixel;
-}
-
-void IntensityImageStudent::setPixel(int i, RGB pixel) {
-	intensityVector.at(i) = static_cast<unsigned char>(
-		pixel.r * redConversionGrade
-		+ pixel.g * greenConversionGrade 
-		+ pixel.b * blueConversionGrade);
 }
 
 Intensity IntensityImageStudent::getPixel(int x, int y) const {
