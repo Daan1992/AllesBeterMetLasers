@@ -12,17 +12,15 @@ class IntensityImageStudent : public IntensityImage {
 public:
 	IntensityImageStudent();
 	IntensityImageStudent(const IntensityImageStudent &other);
-	IntensityImageStudent(const RGBImageStudent &RGB);
+	IntensityImageStudent(const RGBImage &RGB);
 	IntensityImageStudent(const int width, const int height);
 	~IntensityImageStudent();
 
 	void set(const int width, const int height);
 	void set(const IntensityImageStudent &other);
-	void set(const RGBImageStudent &RGB);
 
 	void setPixel(int x, int y, Intensity pixel);
 	void setPixel(int i, Intensity pixel);
-	void setPixel(int i, RGB pixel);
 
 	Intensity getPixel(int x, int y) const;
 	Intensity getPixel(int i) const;
