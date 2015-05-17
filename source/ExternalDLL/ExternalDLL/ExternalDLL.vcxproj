@@ -47,6 +47,9 @@
       <PreprocessorDefinitions>VISION_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\OpenCV\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -85,6 +88,7 @@
     <ClInclude Include="GaussianFilter.h" />
     <ClInclude Include="GrayscaleAlgorithm.h" />
     <ClInclude Include="highPassFilter.h" />
+    <ClInclude Include="laplacianFilter.h" />
     <ClInclude Include="SonnetXVIII.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="ImageFactory.h" />
@@ -117,6 +121,7 @@
     <ClCompile Include="GaussianFilter.cpp" />
     <ClCompile Include="GrayscaleAlgorithm.cpp" />
     <ClCompile Include="highPassFilter.cpp" />
+    <ClCompile Include="laplacianFilter.cpp" />
     <ClCompile Include="SonnetXVIII.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageFactory.cpp" />

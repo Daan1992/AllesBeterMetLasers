@@ -7,7 +7,7 @@ Author: Daan Leijen
 highPassFilter::highPassFilter()
 {
 	filterKernel.resize(9);
-	for (int i = 0; i < filterKernel.size(); i++){
+	for (unsigned int i = 0; i < filterKernel.size(); i++){
 		if (i != 4) { //All except center of matrix
 			filterKernel[i] = -1;
 		}
@@ -29,7 +29,7 @@ IntensityImageStudent highPassFilter::filterImage(const IntensityImageStudent im
 	for (int y = 0; y < filteredImage.getHeight(); y++){
 		for (int x = 0; x < filteredImage.getWidth(); x++){
 			double filteredIntensity = 0.0;
-			for (int i = 0; i < filterKernel.size; i++){
+			for (unsigned int i = 0; i < filterKernel.size(); i++){
 				filteredIntensity += filterKernel[i] * (image.getPixel(x + i % 3, y + i / 3) - 128);
 			}
 			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity + 128));

@@ -6,7 +6,7 @@ Author: Daan Leijen
 #include <math.h>
 #include "GaussianFilter.h"
 
-GaussianFilter::GaussianFilter(int radius = 1, double sigma = 1.0):
+GaussianFilter::GaussianFilter(int radius, double sigma):
 radius{ radius }, sigma{sigma}
 {
 	gaussKernel.resize((2 * radius + 1) * (2 * radius + 1));
@@ -20,7 +20,7 @@ radius{ radius }, sigma{sigma}
 	}
 
 	//Normaliseer het gaussianmask]
-	for (int i = 0; i < gaussKernel.size; i++){
+	for (unsigned int i = 0; i < gaussKernel.size(); i++){
 		gaussKernel[i] /= sum;
 	}
 }
@@ -36,7 +36,7 @@ IntensityImageStudent GaussianFilter::applyFilter(const IntensityImageStudent im
 	for (int y = 0; y < filteredImage.getHeight(); y++){
 		for (int x = 0; x < filteredImage.getWidth(); x++){
 			double filteredIntensity = 0.0;
-			for (int i = 0; i < gaussKernel.size; i++){
+			for (unsigned int i = 0; i < gaussKernel.size(); i++){
 				filteredIntensity += gaussKernel[i] * image.getPixel(x + (i % (2 * radius + 1)), y + i / (2 * radius + 1));
 			}
 			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity));
