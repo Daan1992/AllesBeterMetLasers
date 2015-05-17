@@ -11,7 +11,7 @@ class GaussianFilter
 public:
 	GaussianFilter(int radius = 1, double sigma = 1.0);
 	~GaussianFilter();
-	IntensityImageStudent applyFilter(const IntensityImageStudent image);
+	IntensityImageStudent applyFilter(const IntensityImage &image);
 private:
 	std::vector<double> gaussKernel;
 	int radius;

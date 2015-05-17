@@ -17,12 +17,11 @@ highPassFilter::highPassFilter()
 	}
 }
 
-
 highPassFilter::~highPassFilter()
 {
 }
 
-IntensityImageStudent highPassFilter::filterImage(const IntensityImageStudent image)
+IntensityImageStudent highPassFilter::filterImage(const IntensityImage &image)
 {
 	IntensityImageStudent filteredImage = IntensityImageStudent(image.getWidth() - 2, image.getHeight() - 2);
 

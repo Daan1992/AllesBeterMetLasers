@@ -19,7 +19,7 @@ radius{ radius }, sigma{sigma}
 		}
 	}
 
-	//Normaliseer het gaussianmask]
+	//Normaliseer het gaussianmask
 	for (unsigned int i = 0; i < gaussKernel.size(); i++){
 		gaussKernel[i] /= sum;
 	}
@@ -29,7 +29,7 @@ GaussianFilter::~GaussianFilter()
 {
 }
 
-IntensityImageStudent GaussianFilter::applyFilter(const IntensityImageStudent image)
+IntensityImageStudent GaussianFilter::applyFilter(const IntensityImage &image)
 {
 	IntensityImageStudent filteredImage = IntensityImageStudent(image.getWidth() - 2 * radius, image.getHeight() - 2 * radius);
 	

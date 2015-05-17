@@ -1,5 +1,8 @@
-#include "laplacianFilter.h"
+/*
+Author: Daan Leijen
+*/
 
+#include "laplacianFilter.h"
 
 laplacianFilter::laplacianFilter()
 {
@@ -8,8 +11,11 @@ laplacianFilter::laplacianFilter()
 		if (i % 2) {
 			filterKernel[i] = 0.5;
 		}
+		else if (i == 4) {
+			filterKernel[i] = -6;
+		}
 		else {
-			filterKernel[i] = 8;
+			filterKernel[i] = 1;
 		}
 	}
 }
@@ -17,4 +23,22 @@ laplacianFilter::laplacianFilter()
 
 laplacianFilter::~laplacianFilter()
 {
+}
+
+
+IntensityImageStudent laplacianFilter::filterImage(const IntensityImage &image)
+{
+	IntensityImageStudent filteredImage = IntensityImageStudent(image.getWidth() - 2, image.getHeight() - 2);
+
+	for (int y = 0; y < filteredImage.getHeight(); y++){
+		for (int x = 0; x < filteredImage.getWidth(); x++){
+			double filteredIntensity = 0.0;
+			for (unsigned int i = 0; i < filterKernel.size(); i++){
+				filteredIntensity += filterKernel[i] * (image.getPixel(x + i % 3, y + i / 3) - 128);
+			}
+			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity + 128));
+		}
+	}
+
+	return filteredImage;
 }

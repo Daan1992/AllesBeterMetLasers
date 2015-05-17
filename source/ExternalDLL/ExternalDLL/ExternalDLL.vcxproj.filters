@@ -123,6 +123,9 @@
     <ClInclude Include="laplacianFilter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dynamicThresholdFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Image.cpp">
@@ -207,6 +210,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="laplacianFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicThresholdFilter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

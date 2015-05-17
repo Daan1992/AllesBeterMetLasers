@@ -4,15 +4,12 @@ Author: Daan Leijen
 
 #pragma once
 #include "IntensityImageStudent.h"
-#include <vector>
 
-class highPassFilter
+class dynamicThresholdFilter
 {
 public:
-	highPassFilter();
-	~highPassFilter();
+	dynamicThresholdFilter();
+	~dynamicThresholdFilter();
 	IntensityImageStudent filterImage(const IntensityImage &image);
-private:
-	std::vector<char> filterKernel;
 };
 
