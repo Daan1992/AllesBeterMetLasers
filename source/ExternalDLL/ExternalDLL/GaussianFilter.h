@@ -1,3 +1,7 @@
+/*
+Author: Daan Leijen
+*/
+
 #pragma once
 #include "IntensityImageStudent.h"
 #include <vector>

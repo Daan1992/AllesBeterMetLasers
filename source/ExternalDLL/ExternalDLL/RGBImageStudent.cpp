@@ -1,3 +1,7 @@
+/*
+Author: Daan Leijen
+*/
+
 #include "RGBImageStudent.h"
 
 RGBImageStudent::RGBImageStudent() : RGBImage() {

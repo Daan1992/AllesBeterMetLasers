@@ -84,6 +84,7 @@
     <ClInclude Include="FeatureMap.h" />
     <ClInclude Include="GaussianFilter.h" />
     <ClInclude Include="GrayscaleAlgorithm.h" />
+    <ClInclude Include="highPassFilter.h" />
     <ClInclude Include="SonnetXVIII.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="ImageFactory.h" />
@@ -115,6 +116,7 @@
     <ClCompile Include="FeatureMap.cpp" />
     <ClCompile Include="GaussianFilter.cpp" />
     <ClCompile Include="GrayscaleAlgorithm.cpp" />
+    <ClCompile Include="highPassFilter.cpp" />
     <ClCompile Include="SonnetXVIII.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageFactory.cpp" />

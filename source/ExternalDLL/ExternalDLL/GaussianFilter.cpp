@@ -1,3 +1,7 @@
+/*
+Author: Daan Leijen
+*/
+
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include "GaussianFilter.h"
@@ -27,7 +31,7 @@ GaussianFilter::~GaussianFilter()
 
 IntensityImageStudent GaussianFilter::applyFilter(const IntensityImageStudent image)
 {
-	IntensityImageStudent filteredImage = IntensityImageStudent(image.getWidth() - (2 * radius + 1), image.getHeight() - (2 * radius + 1));
+	IntensityImageStudent filteredImage = IntensityImageStudent(image.getWidth() - 2 * radius, image.getHeight() - 2 * radius);
 	
 	for (int y = 0; y < filteredImage.getHeight(); y++){
 		for (int x = 0; x < filteredImage.getWidth(); x++){
