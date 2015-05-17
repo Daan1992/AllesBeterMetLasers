@@ -82,6 +82,7 @@
     <ClInclude Include="Extraction.h" />
     <ClInclude Include="Feature.h" />
     <ClInclude Include="FeatureMap.h" />
+    <ClInclude Include="GaussianFilter.h" />
     <ClInclude Include="GrayscaleAlgorithm.h" />
     <ClInclude Include="SonnetXVIII.h" />
     <ClInclude Include="Image.h" />
@@ -112,6 +113,7 @@
     <ClCompile Include="export.cpp" />
     <ClCompile Include="Feature.cpp" />
     <ClCompile Include="FeatureMap.cpp" />
+    <ClCompile Include="GaussianFilter.cpp" />
     <ClCompile Include="GrayscaleAlgorithm.cpp" />
     <ClCompile Include="SonnetXVIII.cpp" />
     <ClCompile Include="Image.cpp" />
