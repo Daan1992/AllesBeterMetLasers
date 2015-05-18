@@ -5,8 +5,8 @@
 #include "dynamicThresholdFilter.h"
 
 IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &image) const {
-	IntensityImageStudent iImage = IntensityImageStudent(image);
-	return &iImage;
+	IntensityImageStudent *iImage = new IntensityImageStudent(image);
+	return iImage;
 }
 
 IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &image) const {
