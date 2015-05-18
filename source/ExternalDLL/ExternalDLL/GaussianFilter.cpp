@@ -12,7 +12,7 @@ radius{ radius }, sigma{sigma}
 	gaussKernel.resize((2 * radius + 1) * (2 * radius + 1));
 
 	//Genereer het gaussianmask
-	for (int y = radius; y >= -radius; y++){
+	for (int y = radius; y >= -radius; y--){
 		for (int x = -radius; x <= radius; x++){
 			gaussKernel[-y * (2 * radius + 1) + x] = (1 / (2 * M_PI * pow(sigma, 2.0)))*exp(-1 * (pow(x, 2.0) * pow(y, 2.0) / (2 * pow(sigma, 2.0))));
 			sum += gaussKernel[-y * (2 * radius + 1) + x];
