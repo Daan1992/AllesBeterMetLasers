@@ -16,10 +16,10 @@ IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &imag
 IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &image) const {
 	GaussianFilter gFilter = GaussianFilter(2);
 	laplacianFilter lFilter = laplacianFilter();
-	dynamicThresholdFilter dTFilter = dynamicThresholdFilter();
-	return &dTFilter.filterImage(lFilter.filterImage(gFilter.applyFilter(image)));
+	return &lFilter.filterImage(gFilter.applyFilter(image));
 }
 
 IntensityImage * StudentPreProcessing::stepThresholding(const IntensityImage &image) const {
-	return nullptr;
+	dynamicThresholdFilter dTFilter = dynamicThresholdFilter();
+	return &dTFilter.filterImage(image);
 }
