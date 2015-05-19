@@ -25,5 +25,6 @@ IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &i
 
 IntensityImage * StudentPreProcessing::stepThresholding(const IntensityImage &image) const {
 	dynamicThresholdFilter dTFilter = dynamicThresholdFilter();
-	return &dTFilter.filterImage(image);
+	IntensityImageStudent *iImage = new IntensityImageStudent(dTFilter.filterImage(image));
+	return iImage;
 }
