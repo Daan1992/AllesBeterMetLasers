@@ -16,9 +16,8 @@ IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &imag
 IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &image) const {
 	GaussianFilter gFilter = GaussianFilter(1);
 	laplacianFilter lFilter = laplacianFilter();
-	IntensityImageStudent *iImage =  &gFilter.applyFilter(image);
-	//Returned image has a filled vector, pointer suddenly has empty vector.
-	IntensityImageStudent *iImage2 = &lFilter.filterImage(*iImage);
+	IntensityImageStudent *iImage =  new IntensityImageStudent(gFilter.applyFilter(image));
+	IntensityImageStudent *iImage2 = new IntensityImageStudent(lFilter.filterImage(*iImage));
 	return iImage2;
 }
 
