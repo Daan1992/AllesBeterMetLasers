@@ -9,7 +9,8 @@ Author: Daan Leijen
 class GaussianFilter
 {
 public:
-	GaussianFilter(int radius = 1, double sigma = 1.0);
+	//Advice for sigma is 0.8 + 0.3 * (radius - 1)
+	GaussianFilter(int radius = 1, double sigma = 0.8);
 	~GaussianFilter();
 	IntensityImageStudent applyFilter(const IntensityImage &image);
 private:

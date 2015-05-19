@@ -15,16 +15,25 @@ radius{ radius }, sigma{sigma}
 	//Genereer het gaussianmask
 	for (int y = radius; y >= -radius; y--){
 		for (int x = -radius; x <= radius; x++){
-			std::cout << "kernel index: " << ((-y + radius) * (2 * radius + 1) + (x + radius)) << " Value: " << (1 / (2 * M_PI * pow(sigma, 2.0)))*exp(-1 * (pow(x, 2.0) * pow(y, 2.0) / (2 * pow(sigma, 2.0)))) << "\n";
 			gaussKernel[(-y + radius) * (2 * radius + 1) + (x + radius)] = (1 / (2 * M_PI * pow(sigma, 2.0)))*exp(-1 * (((pow(x, 2.0) * pow(y, 2.0)) / (2 * pow(sigma, 2.0)))));
-			sum += gaussKernel[-y * (2 * radius + 1) + x];
 		}
 	}
+
+	for each (double val in gaussKernel){
+		sum += val;
+	}
+	std::cout << "\nSum before normalization: " << sum;
 
 	//Normaliseer het gaussianmask
 	for (unsigned int i = 0; i < gaussKernel.size(); i++){
 		gaussKernel[i] /= sum;
 	}
+
+	sum = 0.0;
+	for each (double val in gaussKernel){
+		sum += val;
+	}
+	std::cout << "\nSum after normalization: " << sum;
 }
 
 GaussianFilter::~GaussianFilter()
@@ -44,6 +53,5 @@ IntensityImageStudent GaussianFilter::applyFilter(const IntensityImage &image)
 			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity));
 		}
 	}
-	std::cout << "\nGauss:" << "\nWidth: " << filteredImage.getWidth() << "Height: " << filteredImage.getHeight() << "\n";
 	return filteredImage;
 }
