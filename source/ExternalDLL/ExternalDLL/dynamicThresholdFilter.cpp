@@ -3,7 +3,7 @@ Author: Daan Leijen
 */
 
 #include "dynamicThresholdFilter.h"
-
+#include <iostream>
 dynamicThresholdFilter::dynamicThresholdFilter()
 {
 }
@@ -25,6 +25,6 @@ IntensityImageStudent dynamicThresholdFilter::filterImage(const IntensityImage &
 	for (int i = 0; i < image.getWidth()*image.getHeight(); i++){
 		filteredImage.setPixel(i, static_cast<Intensity>(255 * (image.getPixel(i) > average)));
 	}
-
+	std::cout << "\nThreshold:" << "\nWidth: " << filteredImage.getWidth() << "Height: " << filteredImage.getHeight() << "\n";
 	return filteredImage;
 }

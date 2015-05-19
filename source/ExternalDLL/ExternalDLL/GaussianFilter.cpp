@@ -5,6 +5,7 @@ Author: Daan Leijen
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include "GaussianFilter.h"
+#include <iostream>
 
 GaussianFilter::GaussianFilter(int radius, double sigma):
 radius{ radius }, sigma{sigma}
@@ -14,7 +15,8 @@ radius{ radius }, sigma{sigma}
 	//Genereer het gaussianmask
 	for (int y = radius; y >= -radius; y--){
 		for (int x = -radius; x <= radius; x++){
-			gaussKernel[-y * (2 * radius + 1) + x] = (1 / (2 * M_PI * pow(sigma, 2.0)))*exp(-1 * (pow(x, 2.0) * pow(y, 2.0) / (2 * pow(sigma, 2.0))));
+			std::cout << "kernel index: " << ((-y + radius) * (2 * radius + 1) + (x + radius)) << " Value: " << (1 / (2 * M_PI * pow(sigma, 2.0)))*exp(-1 * (pow(x, 2.0) * pow(y, 2.0) / (2 * pow(sigma, 2.0)))) << "\n";
+			gaussKernel[(-y + radius) * (2 * radius + 1) + (x + radius)] = (1 / (2 * M_PI * pow(sigma, 2.0)))*exp(-1 * (((pow(x, 2.0) * pow(y, 2.0)) / (2 * pow(sigma, 2.0)))));
 			sum += gaussKernel[-y * (2 * radius + 1) + x];
 		}
 	}
@@ -42,6 +44,6 @@ IntensityImageStudent GaussianFilter::applyFilter(const IntensityImage &image)
 			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity));
 		}
 	}
-
+	std::cout << "\nGauss:" << "\nWidth: " << filteredImage.getWidth() << "Height: " << filteredImage.getHeight() << "\n";
 	return filteredImage;
 }

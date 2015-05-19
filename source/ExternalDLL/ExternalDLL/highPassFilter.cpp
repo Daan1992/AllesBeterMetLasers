@@ -3,6 +3,7 @@ Author: Daan Leijen
 */
 
 #include "highPassFilter.h"
+#include <iostream>
 
 highPassFilter::highPassFilter()
 {
@@ -34,6 +35,6 @@ IntensityImageStudent highPassFilter::filterImage(const IntensityImage &image)
 			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity + 128));
 		}
 	}
-
+	std::cout << "\nHigh-Pass:" << "\nWidth: " << filteredImage.getWidth() << "Height: " << filteredImage.getHeight() << "\n";
 	return filteredImage;
 }

@@ -14,9 +14,12 @@ IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &imag
 }
 
 IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &image) const {
-	GaussianFilter gFilter = GaussianFilter(2);
+	GaussianFilter gFilter = GaussianFilter(1);
 	laplacianFilter lFilter = laplacianFilter();
-	return &lFilter.filterImage(gFilter.applyFilter(image));
+	IntensityImageStudent *iImage =  &gFilter.applyFilter(image);
+	//Returned image has a filled vector, pointer suddenly has empty vector.
+	IntensityImageStudent *iImage2 = &lFilter.filterImage(*iImage);
+	return iImage2;
 }
 
 IntensityImage * StudentPreProcessing::stepThresholding(const IntensityImage &image) const {
