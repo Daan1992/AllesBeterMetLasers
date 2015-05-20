@@ -8,7 +8,7 @@ IntensityImageStudent::IntensityImageStudent() : IntensityImage() {
 	intensityVector.resize(0);
 }
 
-IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other) 
+IntensityImageStudent::IntensityImageStudent(const IntensityImage &other) 
 	: IntensityImage(other.getWidth(), other.getHeight()) {
 	intensityVector.resize(other.getWidth() * other.getHeight());
 	for (unsigned i = 0; i < intensityVector.size(); i++) {
