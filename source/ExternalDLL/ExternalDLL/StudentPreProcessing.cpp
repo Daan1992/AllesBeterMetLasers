@@ -3,6 +3,7 @@
 #include "GaussianFilter.h"
 #include "laplacianFilter.h"
 #include "dynamicThresholdFilter.h"
+#include "highPassFilter.h"
 
 IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &image) const {
 	IntensityImageStudent *iImage = new IntensityImageStudent(image);
@@ -17,7 +18,7 @@ IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &imag
 IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &image) const {
 	GaussianFilter gFilter = GaussianFilter(2, 1.1);
 	laplacianFilter lFilter = laplacianFilter();
-	IntensityImageStudent *iImage =  new IntensityImageStudent(gFilter.applyFilter(image));
+	IntensityImageStudent *iImage = new IntensityImageStudent(gFilter.applyFilter(image)); 
 	IntensityImageStudent *iImage2 = new IntensityImageStudent(lFilter.filterImage(*iImage));
 	delete iImage;
 	return iImage2;
