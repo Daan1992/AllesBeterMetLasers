@@ -11,10 +11,10 @@ ImageScaler::~ImageScaler()
 
 IntensityImageStudent * ImageScaler::scaleImage(const IntensityImage &image, double scale)
 {
-	IntensityImageStudent *imageXScaled = new IntensityImageStudent(*scaleX(image, scale));
-	IntensityImageStudent *imageScaled = new IntensityImageStudent(*scaleY(*imageXScaled, scale));
-	delete imageXScaled;
-	return imageScaled;
+	//IntensityImageStudent *imageXScaled = new IntensityImageStudent(*scaleX(image, scale));
+	IntensityImageStudent *imageScaled = new IntensityImageStudent(*scaleY(image, scale));
+	//delete imageXScaled;
+	return /imageScaled;
 }
 
 IntensityImageStudent * ImageScaler::scaleX(const IntensityImage &image, double scale)
