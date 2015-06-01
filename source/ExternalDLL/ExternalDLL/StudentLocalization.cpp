@@ -95,11 +95,17 @@ bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &
 	}
 	*/
 
-	//determine middle of head
+	//determine vertical middle of head
 	int middleXIndex = leftXIndex + (rightXIndex - leftXIndex) / 2;
+
+	//determine horizontal middle of head
+	//this actually needs to be determined still, but for now this should do.
+	int middleYIndex = image.getHeight() / 2;
 
 	// Image for testing reasons, to visually confirm the values set by the localization
 	IntensityImageStudent *iImageLayer = new IntensityImageStudent(image);
+
+	
 	//create the yHistogram on the y axis
 	for (int i = 0; i < iImageLayer->getHeight(); i++){
 		for (int j = 0; j < yHistogram[i]; j++){
@@ -131,13 +137,20 @@ bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &
 		iImageLayer->setPixel(rightXIndex, k, 0);
 	}
 
-	//draw a line in the middle of the head
+	//draw a vertical line in the middle of the head
 	for (int k = 0; k < iImageLayer->getHeight(); k++){
 		iImageLayer->setPixel(middleXIndex, k, 0);
 	}
 	
-	//set top of head to white pixel
+	//draw a horizontal line in the middle of the head
+	for (int k = 0; k < iImageLayer->getWidth(); k++){
+		iImageLayer->setPixel(k, middleYIndex, 0);
+	}
+
+	//set intersections to white pixel
 	iImageLayer->setPixel(middleXIndex, topYIndex, 255);
+	iImageLayer->setPixel(leftXIndex, middleYIndex, 255);
+	iImageLayer->setPixel(rightXIndex, middleYIndex, 255);
 
 	//save the test image
 	ImageIO::saveIntensityImage(*iImageLayer, ImageIO::getDebugFileName("HistogramLayered.png"));
@@ -164,10 +177,14 @@ bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &
 	
 	//features
 
-	Feature headTop = Feature(Feature::FEATURE_HEAD_TOP, Point2D<double>(topYIndex, middleXIndex));
+	Feature headTop = Feature(Feature::FEATURE_HEAD_TOP, Point2D<double>(middleXIndex, topYIndex));
 	features.putFeature(headTop);
 
+	Feature headLeft = Feature(Feature::FEATURE_HEAD_LEFT_SIDE, Point2D<double>(leftXIndex, middleYIndex));
+	features.putFeature(headLeft);
 
+	Feature headRight = Feature(Feature::FEATURE_HEAD_RIGHT_SIDE, Point2D<double>(rightXIndex, middleYIndex));
+	features.putFeature(headRight);
 
 	// cleanup and stuff
 	delete iImageLayer;
@@ -175,7 +192,7 @@ bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &
 	delete xImage;
 	delete[] yHistogram;
 	delete[] xHistogram;
-	return false;
+	return true;
 }
 
 bool StudentLocalization::stepFindNoseMouthAndChin(const IntensityImage &image, FeatureMap &features) const {
