@@ -18,12 +18,12 @@ int main(int argc, char * argv[]) {
 	ImageFactory::setImplementation(ImageFactory::STUDENT);
 
 	//ImageIO::debugFolder = "F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
-	ImageIO::debugFolder = "C:\\Users\\Kevin\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
+	ImageIO::debugFolder = "C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
 	ImageIO::isInDebugMode = true; //If set to false the ImageIO class will skip any image save function calls
 
 	RGBImage * input = ImageFactory::newRGBImage();
 	//if (!ImageIO::loadImage("F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Kevin-1.jpg", *input)) {
-	if (!ImageIO::loadImage("C:\\Users\\Kevin\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
+	if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
 		std::cout << "Image could not be loaded!" << std::endl;
 		system("pause");
 		return 0;
@@ -77,7 +77,7 @@ bool executeSteps(DLLExecution * executor) {
 		return false;
 	}
 
-	if (!executor->executeLocalizationStep1(false)) {
+	if (!executor->executeLocalizationStep1(true)) {
 		std::cout << "Localization step 1 failed!" << std::endl;
 		return false;
 	}
