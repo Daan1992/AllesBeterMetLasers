@@ -126,6 +126,9 @@
     <ClInclude Include="dynamicThresholdFilter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ImageScaler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Image.cpp">
@@ -213,6 +216,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dynamicThresholdFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageScaler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
