@@ -12,8 +12,5 @@ public:
 	ImageScaler();
 	~ImageScaler();
 	IntensityImageStudent * scaleImage(const IntensityImage &image, double scale);
-private:
-	IntensityImageStudent * scaleX(const IntensityImage &image, double scale);
-	IntensityImageStudent * scaleY(const IntensityImage &image, double scale);
 };
 

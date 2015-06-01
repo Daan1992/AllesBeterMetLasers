@@ -11,46 +11,20 @@ ImageScaler::~ImageScaler()
 
 IntensityImageStudent * ImageScaler::scaleImage(const IntensityImage &image, double scale)
 {
-	//IntensityImageStudent *imageXScaled = new IntensityImageStudent(*scaleX(image, scale));
-	IntensityImageStudent *imageScaled = new IntensityImageStudent(*scaleY(image, scale));
-	//delete imageXScaled;
-	return /imageScaled;
-}
+	IntensityImageStudent *targetImage = new IntensityImageStudent(static_cast<int>(ceil(image.getWidth() * scale)), static_cast<int>(ceil(image.getHeight() * scale)));
+	
+	for (int x = 0; x < targetImage->getWidth(); x++){
+		for (int y = 0; y < targetImage->getHeight(); y++){
+			double x_source = x / scale; double y_source = y / scale;
+			double pixelvalue = image.getPixel(static_cast<int>(floor(x_source)), static_cast<int>(floor(y_source))) * (x_source - floor(x_source)) * (y_source - floor(y_source));
+			pixelvalue += image.getPixel(static_cast<int>(floor(x_source)), static_cast<int>(ceil(y_source))) * (x_source - floor(x_source)) * (ceil(y_source) - y_source);
+			pixelvalue += image.getPixel(static_cast<int>(ceil(x_source)), static_cast<int>(floor(y_source))) * (ceil(x_source) - x_source) * (y_source - floor(y_source));
+			pixelvalue += image.getPixel(static_cast<int>(ceil(x_source)), static_cast<int>(ceil(y_source))) * (ceil(x_source) - x_source) * (ceil(y_source) - y_source);
 
-IntensityImageStudent * ImageScaler::scaleX(const IntensityImage &image, double scale)
-{
-	IntensityImageStudent *scaledImage = new IntensityImageStudent(static_cast<int>(ceil(image.getWidth() * scale)) + 1, image.getHeight());
-	for (int y = 0; y < image.getHeight(); y++){
-		for (int x = 0; x < image.getWidth(); x++){
-			double newX = x * scale;
-			scaledImage->setPixel(static_cast<int>(floor(newX)), 
-				y, 
-				scaledImage->getPixel(static_cast<int>(floor(newX)), y) 
-				+ static_cast<Intensity>(image.getPixel(x, y) * (1 - (newX - floor(newX)))));
-			scaledImage->setPixel(static_cast<int>(ceil(newX)),
-				y,
-				scaledImage->getPixel(static_cast<int>(ceil(newX)), y)
-				+ static_cast<Intensity>(image.getPixel(x, y) * (newX - floor(newX))));
+			targetImage->setPixel(x, y, static_cast<Intensity>(pixelvalue));
 		}
 	}
-	return scaledImage;
+
+	return targetImage;
 }
 
-IntensityImageStudent * ImageScaler::scaleY(const IntensityImage &image, double scale)
-{
-	IntensityImageStudent *scaledImage = new IntensityImageStudent(image.getWidth(), static_cast<int>(ceil(image.getHeight() * scale)) + 1);
-	for (int x = 0; x < image.getWidth(); x++){
-		for (int y = 0; y < image.getHeight(); y++){
-			double newY = y * scale;
-			scaledImage->setPixel(x,
-				static_cast<int>(floor(newY)),
-				scaledImage->getPixel(x, static_cast<int>(floor(newY)))
-				+ static_cast<Intensity>(image.getPixel(x, y) * (1 - (newY - floor(newY)))));
-			scaledImage->setPixel(x,
-				static_cast<int>(ceil(newY)),
-				scaledImage->getPixel(x, static_cast<int>(ceil(newY)))
-				+ static_cast<Intensity>(image.getPixel(x, y) * (newY - floor(newY))));
-		}
-	}
-	return scaledImage;
-}
