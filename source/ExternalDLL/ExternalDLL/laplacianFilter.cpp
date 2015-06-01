@@ -1,5 +1,5 @@
 #include "laplacianFilter.h"
-#include <iostream>
+//#include <iostream>
 
 laplacianFilter::laplacianFilter()
 {
@@ -36,6 +36,6 @@ IntensityImageStudent laplacianFilter::filterImage(const IntensityImage &image)
 			filteredImage.setPixel(x, y, static_cast<Intensity>(filteredIntensity + 128));
 		}
 	}
-	std::cout << "\nLaplacian:" << "\nWidth: " << filteredImage.getWidth() << "Height: " << filteredImage.getHeight() << "\n";
+	//std::cout << "\nLaplacian:" << "\nWidth: " << filteredImage.getWidth() << "Height: " << filteredImage.getHeight() << "\n";
 	return filteredImage;
 }

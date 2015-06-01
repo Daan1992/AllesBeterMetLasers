@@ -5,7 +5,7 @@ Author: Daan Leijen
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include "GaussianFilter.h"
-#include <iostream>
+//#include <iostream>
 
 GaussianFilter::GaussianFilter(int radius, double sigma):
 radius{ radius }, sigma{sigma}
@@ -22,7 +22,7 @@ radius{ radius }, sigma{sigma}
 	for each (double val in gaussKernel){
 		sum += val;
 	}
-	std::cout << "\nSum before normalization: " << sum;
+	//std::cout << "\nSum before normalization: " << sum;
 
 	//Normaliseer het gaussianmask
 	for (unsigned int i = 0; i < gaussKernel.size(); i++){
@@ -33,7 +33,7 @@ radius{ radius }, sigma{sigma}
 	for each (double val in gaussKernel){
 		sum += val;
 	}
-	std::cout << "\nSum after normalization: " << sum;
+	//std::cout << "\nSum after normalization: " << sum;
 }
 
 GaussianFilter::~GaussianFilter()
