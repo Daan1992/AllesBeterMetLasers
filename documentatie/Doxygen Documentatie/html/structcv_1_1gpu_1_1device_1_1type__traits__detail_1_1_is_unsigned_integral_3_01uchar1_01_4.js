@@ -1,0 +1,4 @@
+var structcv_1_1gpu_1_1device_1_1type__traits__detail_1_1_is_unsigned_integral_3_01uchar1_01_4 =
+[
+    [ "value", "structcv_1_1gpu_1_1device_1_1type__traits__detail_1_1_is_unsigned_integral_3_01uchar1_01_4.html#ab04cb3ae786e880f6f17da63383c2ec9af12fbde4d3b72874f017cc296ae67ce8", null ]
+];

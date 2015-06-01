@@ -1,0 +1,4 @@
+var structcv_1_1gpu_1_1device_1_1type__traits__detail_1_1_is_signed_intergral_3_01short1_01_4 =
+[
+    [ "value", "structcv_1_1gpu_1_1device_1_1type__traits__detail_1_1_is_signed_intergral_3_01short1_01_4.html#a915a71a38a582f613da7e56923549408a50918a03e2f43599201b97a733302d57", null ]
+];
