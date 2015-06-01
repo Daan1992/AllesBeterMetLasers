@@ -23,8 +23,13 @@ int main(int argc, char * argv[]) {
 	ImageIO::isInDebugMode = true; //If set to false the ImageIO class will skip any image save function calls
 
 	RGBImage * input = ImageFactory::newRGBImage();
+<<<<<<< HEAD
 	if (!ImageIO::loadImage("F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\male-3.png", *input)) {
 	//if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
+=======
+	//if (!ImageIO::loadImage("F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
+	if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\lucius.png", *input)) {
+>>>>>>> origin/Niet-scaling
 
 		std::cout << "Image could not be loaded!" << std::endl;
 		system("pause");
@@ -39,7 +44,7 @@ int main(int argc, char * argv[]) {
 		std::cout << "Face recognition successful!" << std::endl;
 		std::cout << "Facial parameters: " << std::endl;
 		for (int i = 0; i < 16; i++) {
-			std::cout << (i+1) << ": " << executor->facialParameters[i] << std::endl;
+			std::cout << (i + 1) << ": " << executor->facialParameters[i] << std::endl;
 		}
 	}
 
