@@ -11,8 +11,9 @@
 
 //! Student implementation of a class representing an IntensityImage
 /*!
-\author Kevin Nijmeijer
-*/
+ *	\author Kevin Nijmeijer
+ *	\author Daan Leijen
+ */
 class IntensityImageStudent : public IntensityImage {
 public:
 	IntensityImageStudent();

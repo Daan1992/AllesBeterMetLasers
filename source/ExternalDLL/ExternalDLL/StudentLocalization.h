@@ -6,6 +6,15 @@
 
 #pragma once
 #include "Localization.h"
+#include "IntensityImageStudent.h"
+#include "ImageIO.h"
+
+
+/*! 
+ *	\brief The class responsible for locating various features used in further steps of localization and extraction.
+ *	\author Kevin Nijmeijer
+ */
+
 class StudentLocalization :
 	public Localization {
 public:

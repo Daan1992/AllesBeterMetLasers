@@ -1,8 +1,7 @@
 #define DENOMINATOR 2
 
 #include "StudentLocalization.h"
-#include "IntensityImageStudent.h"
-#include "ImageIO.h"
+
 
 bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &features) const {
 
