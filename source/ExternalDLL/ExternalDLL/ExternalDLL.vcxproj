@@ -89,6 +89,7 @@
     <ClInclude Include="GaussianFilter.h" />
     <ClInclude Include="GrayscaleAlgorithm.h" />
     <ClInclude Include="highPassFilter.h" />
+    <ClInclude Include="ImageScaler.h" />
     <ClInclude Include="laplacianFilter.h" />
     <ClInclude Include="SonnetXVIII.h" />
     <ClInclude Include="Image.h" />
@@ -123,6 +124,7 @@
     <ClCompile Include="GaussianFilter.cpp" />
     <ClCompile Include="GrayscaleAlgorithm.cpp" />
     <ClCompile Include="highPassFilter.cpp" />
+    <ClCompile Include="ImageScaler.cpp" />
     <ClCompile Include="laplacianFilter.cpp" />
     <ClCompile Include="SonnetXVIII.cpp" />
     <ClCompile Include="Image.cpp" />

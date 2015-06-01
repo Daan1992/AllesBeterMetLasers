@@ -58,7 +58,7 @@ void IntensityImageStudent::setPixel(int i, Intensity pixel) {
 }
 
 Intensity IntensityImageStudent::getPixel(int x, int y) const {
-	if (x <= width && y <= height) {
+	if (x < width && y < height) {
 		return intensityVector.at(y * width + x);
 	}
 	return 0;
