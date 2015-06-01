@@ -28,17 +28,17 @@ bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &
 
 
 	IntensityImageStudent *iImage = new IntensityImageStudent(highestVal, image.getHeight());
-	
+	/*
 	for (int i = 0; i < iImage->getHeight(); i++){
 		for (int j = 0; j < iImage->getWidth(); j++){
 			iImage->setPixel(j, i, 255);
 		}
 	}
-	
+	*/
 	for (int i = 0; i < iImage->getHeight(); i++){
 		for (int j = 0; j < yHistogram[i]; j++){
-			iImage->setPixel(j, i, 0);
-			//iImage->setPixel(j, i, 255);
+			//iImage->setPixel(j, i, 0);
+			iImage->setPixel(j, i, 255);
 		}
 	}
 
