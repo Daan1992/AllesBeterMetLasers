@@ -8,6 +8,11 @@
 #include "IntensityImage.h"
 #include "RGBImageStudent.h"
 #include <vector>
+
+//! Student implementation of a class representing an IntensityImage
+/*!
+\author Kevin Nijmeijer
+*/
 class IntensityImageStudent : public IntensityImage {
 public:
 	IntensityImageStudent();

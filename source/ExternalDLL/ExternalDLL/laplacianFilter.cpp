@@ -1,7 +1,3 @@
-/*
-Author: Daan Leijen
-*/
-
 #include "laplacianFilter.h"
 #include <iostream>
 

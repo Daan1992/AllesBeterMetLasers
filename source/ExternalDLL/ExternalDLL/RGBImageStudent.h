@@ -7,6 +7,11 @@
 #pragma once
 #include "RGBImage.h"
 #include <vector>
+
+//! Student implementation of a class representing an RGBImage
+/*!
+\author Daan Leijen
+*/
 class RGBImageStudent : public RGBImage {
 public:
 	RGBImageStudent();

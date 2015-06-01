@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['nativearray',['NativeArray',['../classtesting_1_1internal_1_1_native_array.html',1,'testing::internal']]],
+  ['negate',['negate',['../structcv_1_1gpu_1_1device_1_1negate.html',1,'cv::gpu::device']]],
+  ['next',['next',['../classcvflann_1_1_unique_random.html#a95eb32308d0a5a2d99a03fe23d809c1f',1,'cvflann::UniqueRandom']]],
+  ['nnindex',['NNIndex',['../classcvflann_1_1_n_n_index.html',1,'cvflann']]],
+  ['no',['No',['../structcv_1_1gpu_1_1device_1_1_is_unary_function_1_1_no.html',1,'cv::gpu::device::IsUnaryFunction']]],
+  ['no',['No',['../structcv_1_1gpu_1_1device_1_1_is_binary_function_1_1_no.html',1,'cv::gpu::device::IsBinaryFunction']]],
+  ['noexposurecompensator',['NoExposureCompensator',['../classcv_1_1detail_1_1_no_exposure_compensator.html',1,'cv::detail']]],
+  ['noseamfinder',['NoSeamFinder',['../classcv_1_1detail_1_1_no_seam_finder.html',1,'cv::detail']]],
+  ['not_5fequal_5fto',['not_equal_to',['../structcv_1_1gpu_1_1device_1_1not__equal__to.html',1,'cv::gpu::device']]],
+  ['nscales',['nscales',['../classcv_1_1gpu_1_1_optical_flow_dual___t_v_l1___g_p_u.html#ac17a62999ac19bed123d8f6bb4f5336d',1,'cv::gpu::OpticalFlowDual_TVL1_GPU::nscales()'],['../classcv_1_1ocl_1_1_optical_flow_dual___t_v_l1___o_c_l.html#a32d9f7085b3255a2850cc30c7ec9c478',1,'cv::ocl::OpticalFlowDual_TVL1_OCL::nscales()']]],
+  ['nulldeblurer',['NullDeblurer',['../classcv_1_1videostab_1_1_null_deblurer.html',1,'cv::videostab']]],
+  ['nullframesource',['NullFrameSource',['../classcv_1_1videostab_1_1_null_frame_source.html',1,'cv::videostab']]],
+  ['nullinpainter',['NullInpainter',['../classcv_1_1videostab_1_1_null_inpainter.html',1,'cv::videostab']]],
+  ['nulllog',['NullLog',['../classcv_1_1videostab_1_1_null_log.html',1,'cv::videostab']]],
+  ['numeric_5flimits',['numeric_limits',['../structcv_1_1gpu_1_1device_1_1numeric__limits.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20bool_20_3e',['numeric_limits&lt; bool &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01bool_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20double_20_3e',['numeric_limits&lt; double &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01double_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20float_20_3e',['numeric_limits&lt; float &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01float_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20int_20_3e',['numeric_limits&lt; int &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01int_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20short_20_3e',['numeric_limits&lt; short &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01short_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20signed_20char_20_3e',['numeric_limits&lt; signed char &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01signed_01char_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20unsigned_20char_20_3e',['numeric_limits&lt; unsigned char &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01unsigned_01char_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20unsigned_20int_20_3e',['numeric_limits&lt; unsigned int &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01unsigned_01int_01_4.html',1,'cv::gpu::device']]],
+  ['numeric_5flimits_3c_20unsigned_20short_20_3e',['numeric_limits&lt; unsigned short &gt;',['../structcv_1_1gpu_1_1device_1_1numeric__limits_3_01unsigned_01short_01_4.html',1,'cv::gpu::device']]],
+  ['numinitializationframes',['numInitializationFrames',['../classcv_1_1gpu_1_1_g_m_g___g_p_u.html#ab4796b2f60da0a859dd242ec5681ea43',1,'cv::gpu::GMG_GPU::numInitializationFrames()'],['../classcv_1_1_background_subtractor_g_m_g.html#a5378e398520be8ed6e696488d329b122',1,'cv::BackgroundSubtractorGMG::numInitializationFrames()']]]
+];

@@ -1,10 +1,10 @@
-/*
-Author: Daan Leijen
-*/
-
 #pragma once
 #include "IntensityImageStudent.h"
 
+//! Class representing a dynamic threshold filter
+/*!
+\author Daan Leijen
+*/
 class dynamicThresholdFilter
 {
 public:

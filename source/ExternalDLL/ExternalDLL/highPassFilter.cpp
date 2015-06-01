@@ -1,7 +1,3 @@
-/*
-Author: Daan Leijen
-*/
-
 #include "highPassFilter.h"
 #include <iostream>
 

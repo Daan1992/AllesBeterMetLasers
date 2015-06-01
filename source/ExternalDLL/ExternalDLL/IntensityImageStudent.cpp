@@ -1,7 +1,3 @@
-/*
-Author: Kevin Nijmeijer
-*/
-
 #include "IntensityImageStudent.h"
 
 IntensityImageStudent::IntensityImageStudent() : IntensityImage() {
