@@ -18,14 +18,14 @@ int main(int argc, char * argv[]) {
 	ImageFactory::setImplementation(ImageFactory::STUDENT);
 
 
-	//ImageIO::debugFolder = "F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
-	ImageIO::debugFolder = "C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
+	ImageIO::debugFolder = "F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
+	//ImageIO::debugFolder = "C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\done";
 	ImageIO::isInDebugMode = true; //If set to false the ImageIO class will skip any image save function calls
 
 	RGBImage * input = ImageFactory::newRGBImage();
 
-	//if (!ImageIO::loadImage("F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
-	if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\female-1.png", *input)) {
+	if (!ImageIO::loadImage("F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lena.jpg", *input)) {
+	//if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\female-1.png", *input)) {
 
 
 		std::cout << "Image could not be loaded!" << std::endl;

@@ -13,14 +13,14 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 
 IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &image) const {
 	ImageScaler scaler = ImageScaler();
-	IntensityImageStudent *iImage = new IntensityImageStudent(*scaler.scaleImage(image, 1));
+	IntensityImageStudent *iImage = new IntensityImageStudent(*scaler.scaleImage(image, 0.3));
 	return iImage;
 }
 
 IntensityImage * StudentPreProcessing::stepEdgeDetection(const IntensityImage &image) const {
-	GaussianFilter gFilter = GaussianFilter(3, 1.4);
+	GaussianFilter gFilter = GaussianFilter(4, 1.7);
 	laplacianFilter lFilter = laplacianFilter();
-	IntensityImageStudent iImage = IntensityImageStudent(gFilter.applyFilter(image)); 
+	IntensityImageStudent iImage = IntensityImageStudent(gFilter.applyFilter(image));
 	IntensityImageStudent *iImage2 = new IntensityImageStudent(lFilter.filterImage(iImage));
 	return iImage2;
 }
