@@ -10,10 +10,10 @@ laplacianFilter::laplacianFilter()
 	filterKernel.resize(9);
 	for (unsigned int i = 0; i < filterKernel.size(); i++){
 		if (i % 2) {
-			filterKernel[i] = 0.5;
+			filterKernel[i] = 1;
 		}
 		else if (i == 4) {
-			filterKernel[i] = -6;
+			filterKernel[i] = -8;
 		}
 		else {
 			filterKernel[i] = 1;
