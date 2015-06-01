@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['calckeypointslocation',['calcKeyPointsLocation',['../classcv_1_1gpu_1_1_f_a_s_t___g_p_u.html#a03ff70a004c7e7b9b1a49363d39f2023',1,'cv::gpu::FAST_GPU']]],
+  ['cast',['cast',['../structcvflann_1_1any.html#a6434473fb7b9ef53e4bcbfd066d3435d',1,'cvflann::any::cast()'],['../structcvflann_1_1any.html#a8a30d3102c07ef58a2e8b3a49864d418',1,'cvflann::any::cast() const ']]],
+  ['channels',['channels',['../classcv_1_1ocl_1_1ocl_mat.html#a16c42ad18b85e6c55ce5e8ec5fcbd114',1,'cv::ocl::oclMat']]],
+  ['checkifgpucallreasonable',['checkIfGpuCallReasonable',['../classcv_1_1gpu_1_1_stereo_b_m___g_p_u.html#aa0c2d6dc1f92e94410c2b3c42c242f0a',1,'cv::gpu::StereoBM_GPU::checkIfGpuCallReasonable()'],['../classcv_1_1ocl_1_1_stereo_b_m___o_c_l.html#aa523805f7cdb99c599767b8550eb99d9',1,'cv::ocl::StereoBM_OCL::checkIfGpuCallReasonable()']]],
+  ['choosecentersgonzales',['chooseCentersGonzales',['../classcvflann_1_1_k_means_index.html#a224fbbe5fdc60db9374ddbf499b0e9d3',1,'cvflann::KMeansIndex']]],
+  ['choosecenterskmeanspp',['chooseCentersKMeanspp',['../classcvflann_1_1_k_means_index.html#a02bf5e31ac3996251fea5e2de6bd3fea',1,'cvflann::KMeansIndex']]],
+  ['choosecentersrandom',['chooseCentersRandom',['../classcvflann_1_1_k_means_index.html#a2dd49d64f6cdc7751990ee1f1920609e',1,'cvflann::KMeansIndex']]],
+  ['clear',['clear',['../classcvflann_1_1_dynamic_bitset.html#af95686fa6147337f50bbae026d994263',1,'cvflann::DynamicBitset::clear()'],['../classcvflann_1_1_heap.html#ae48047dff69cce90629cf8a8b4f6ab6d',1,'cvflann::Heap::clear()'],['../classcvflann_1_1_unique_result_set.html#ad0f6df2b89548ce26bbdfa398436a3e7',1,'cvflann::UniqueResultSet::clear()'],['../classcvflann_1_1_k_n_n_unique_result_set.html#afcf19c6a201b4580983b6baaae0a8383',1,'cvflann::KNNUniqueResultSet::clear()'],['../classcvflann_1_1_radius_unique_result_set.html#ae9b39884adddbb060d6661ec4e7c0b0d',1,'cvflann::RadiusUniqueResultSet::clear()'],['../classcvflann_1_1_k_n_n_radius_unique_result_set.html#a27dc9cb92948546e04ecad20682f06c0',1,'cvflann::KNNRadiusUniqueResultSet::clear()']]],
+  ['clearbuffers',['clearBuffers',['../classcv_1_1_retina.html#a3f9ccc0875b12fd32a26764951bdfea6',1,'cv::Retina']]],
+  ['clone',['clone',['../classcv_1_1gpu_1_1_cuda_mem.html#af36c83182073fff8e1ef61ac7cfcf027',1,'cv::gpu::CudaMem::clone()'],['../classcv_1_1ocl_1_1ocl_mat.html#ab6d0ca3f3b2093abe6325d24dc9cee63',1,'cv::ocl::oclMat::clone()']]],
+  ['col',['col',['../classcv_1_1ocl_1_1ocl_mat.html#a761d9493dc8d989b0bec105e832e8fb6',1,'cv::ocl::oclMat']]],
+  ['colrange',['colRange',['../classcv_1_1ocl_1_1ocl_mat.html#a8d61c3d2a4c840c9f785ea1e319e1981',1,'cv::ocl::oclMat']]],
+  ['compatible',['compatible',['../structcvflann_1_1any.html#a755b50cc51c7c37162d7b39d1010f117',1,'cvflann::any']]],
+  ['compositeindex',['CompositeIndex',['../classcvflann_1_1_composite_index.html#a4f60067d01b598c83d4eb87406987240',1,'cvflann::CompositeIndex']]],
+  ['convertkeypoints',['convertKeypoints',['../classcv_1_1gpu_1_1_f_a_s_t___g_p_u.html#a4add5048b7d1909796ba6c91ac0e4045',1,'cv::gpu::FAST_GPU::convertKeypoints()'],['../classcv_1_1gpu_1_1_o_r_b___g_p_u.html#ae34e78f749b4f7304e994ab47cd7d1d5',1,'cv::gpu::ORB_GPU::convertKeyPoints()']]],
+  ['convertto',['convertTo',['../classcv_1_1ocl_1_1ocl_mat.html#a4d11801c217de657e68b784834bdd627',1,'cv::ocl::oclMat']]],
+  ['copy',['copy',['../classcvflann_1_1_unique_result_set.html#a0d41e712bb5dff2dcf139f028df7d0f5',1,'cvflann::UniqueResultSet']]],
+  ['copyto',['copyTo',['../classcv_1_1ocl_1_1ocl_mat.html#af97b3a1bc63dba9143e4eb835dc0bf48',1,'cv::ocl::oclMat']]],
+  ['create',['create',['../classcv_1_1gpu_1_1_cuda_mem.html#a5a8445ccfa3608701e8a04ecc69cbf6c',1,'cv::gpu::CudaMem::create()'],['../classcv_1_1ocl_1_1ocl_mat.html#aa230a306d044e659d535e9ecfca2ab31',1,'cv::ocl::oclMat::create()']]],
+  ['createex',['createEx',['../classcv_1_1ocl_1_1ocl_mat.html#a25f73dfb1e968f7068174d64383ff9ff',1,'cv::ocl::oclMat']]],
+  ['creategpumatheader',['createGpuMatHeader',['../classcv_1_1gpu_1_1_cuda_mem.html#add035cf3265ca95214f8784b0cf18b64',1,'cv::gpu::CudaMem']]],
+  ['creatematheader',['createMatHeader',['../classcv_1_1gpu_1_1_cuda_mem.html#a588489fa2732303f4e21f851d7784d7d',1,'cv::gpu::CudaMem']]],
+  ['cudamem',['CudaMem',['../classcv_1_1gpu_1_1_cuda_mem.html#abe1d6aa0602f94c466e8962503cc47ed',1,'cv::gpu::CudaMem']]],
+  ['cv_5fwrap_5fas',['CV_WRAP_AS',['../classcv_1_1_background_subtractor.html#ab880cbcaa3cbacf1a7e65193b18df76b',1,'cv::BackgroundSubtractor']]]
+];

@@ -31,7 +31,7 @@ public:
 	Intensity getPixel(int i) const;
 private:
 	std::vector<Intensity> intensityVector;
-	const float redConversionGrade = 0.30f;
-	const float greenConversionGrade = 0.59f;
-	const float blueConversionGrade = 0.11f;
+	const float redConversionGrade = 0.2126f;
+	const float greenConversionGrade = 0.7152f;
+	const float blueConversionGrade = 1.0f - redConversionGrade - greenConversionGrade;
 };

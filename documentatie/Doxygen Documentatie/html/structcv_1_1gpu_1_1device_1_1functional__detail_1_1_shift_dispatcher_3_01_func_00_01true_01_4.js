@@ -1,0 +1,4 @@
+var structcv_1_1gpu_1_1device_1_1functional__detail_1_1_shift_dispatcher_3_01_func_00_01true_01_4 =
+[
+    [ "shift", "structcv_1_1gpu_1_1device_1_1functional__detail_1_1_shift_dispatcher_3_01_func_00_01true_01_4.html#aad9d0faced202947ad643ad5fdfffe51a99fd4652ca1c708e70a6413f20b700e7", null ]
+];
