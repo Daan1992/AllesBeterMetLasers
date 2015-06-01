@@ -12,16 +12,23 @@ ImageScaler::~ImageScaler()
 IntensityImageStudent * ImageScaler::scaleImage(const IntensityImage &image, double scale)
 {
 	IntensityImageStudent *targetImage = new IntensityImageStudent(static_cast<int>(ceil(image.getWidth() * scale)), static_cast<int>(ceil(image.getHeight() * scale)));
-	
-	for (int x = 0; x < targetImage->getWidth(); x++){
-		for (int y = 0; y < targetImage->getHeight(); y++){
+	for (int y = 0; y < targetImage->getHeight(); y++){
+		for (int x = 0; x < targetImage->getWidth(); x++){
 			double x_source = x / scale; double y_source = y / scale;
-			double pixelvalue = image.getPixel(static_cast<int>(floor(x_source)), static_cast<int>(floor(y_source))) * (x_source - floor(x_source)) * (y_source - floor(y_source));
-			pixelvalue += image.getPixel(static_cast<int>(floor(x_source)), static_cast<int>(ceil(y_source))) * (x_source - floor(x_source)) * (ceil(y_source) - y_source);
-			pixelvalue += image.getPixel(static_cast<int>(ceil(x_source)), static_cast<int>(floor(y_source))) * (ceil(x_source) - x_source) * (y_source - floor(y_source));
-			pixelvalue += image.getPixel(static_cast<int>(ceil(x_source)), static_cast<int>(ceil(y_source))) * (ceil(x_source) - x_source) * (ceil(y_source) - y_source);
 
-			std::cout << "\nSetting pixel (" << x << "," << y << ") to value: " << pixelvalue;
+			int leftX = static_cast<int>(floor(x_source)); int rightX = leftX + 1;
+			double weightX = x_source - leftX;
+
+			int topY = static_cast<int>(floor(y_source)); int bottomY = topY + 1;
+			double weightY = y_source - topY;
+
+			double topLeft = image.getPixel(leftX, topY) * (1 - weightX) * (1 - weightY);
+			double bottomLeft = image.getPixel(leftX, bottomY) * (1 - weightX) * weightY;
+			double topRight = image.getPixel(rightX, topY) * weightX * (1 - weightY);
+			double bottomRight = image.getPixel(rightX, bottomY) * weightX * weightY;
+
+			int pixelvalue = static_cast<int>(topLeft + bottomLeft + topRight + bottomRight);
+			
 			targetImage->setPixel(x, y, static_cast<Intensity>(pixelvalue));
 		}
 	}
