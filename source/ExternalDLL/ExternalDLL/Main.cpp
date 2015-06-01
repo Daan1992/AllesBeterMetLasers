@@ -24,7 +24,7 @@ int main(int argc, char * argv[]) {
 
 	RGBImage * input = ImageFactory::newRGBImage();
 	//if (!ImageIO::loadImage("F:\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
-	if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\Lucius.png", *input)) {
+	if (!ImageIO::loadImage("C:\\Users\\Kevin Nijmeijer\\Documents\\GitHub\\AllesBeterMetLasers\\testsets\\Set A\\TestSet Images\\lucius.png", *input)) {
 
 		std::cout << "Image could not be loaded!" << std::endl;
 		system("pause");
@@ -39,7 +39,7 @@ int main(int argc, char * argv[]) {
 		std::cout << "Face recognition successful!" << std::endl;
 		std::cout << "Facial parameters: " << std::endl;
 		for (int i = 0; i < 16; i++) {
-			std::cout << (i+1) << ": " << executor->facialParameters[i] << std::endl;
+			std::cout << (i + 1) << ": " << executor->facialParameters[i] << std::endl;
 		}
 	}
 

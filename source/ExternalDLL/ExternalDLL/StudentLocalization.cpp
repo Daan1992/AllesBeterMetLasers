@@ -1,3 +1,5 @@
+#define MINIMALDIFFERENCE 10
+
 #include "StudentLocalization.h"
 #include "IntensityImageStudent.h"
 #include "ImageIO.h"
@@ -26,24 +28,38 @@ bool StudentLocalization::stepFindHead(const IntensityImage &image, FeatureMap &
 
 	}
 
+	int topYIndex = 0;
+	int i = 1;
+	while (yHistogram[i] - yHistogram[i - 1] < MINIMALDIFFERENCE){
+		topYIndex++;
+		i++;
+	}
+	
 
-	IntensityImageStudent *iImage = new IntensityImageStudent(highestVal, image.getHeight());
-	/*
-	for (int i = 0; i < iImage->getHeight(); i++){
-		for (int j = 0; j < iImage->getWidth(); j++){
-			iImage->setPixel(j, i, 255);
+	// Just making an image with the histogram layered on top of it for comparison reasons
+	IntensityImageStudent *iImageLayer = new IntensityImageStudent(image);
+	for (int i = 0; i < iImageLayer->getHeight(); i++){
+		for (int j = 0; j < yHistogram[i]; j++){
+			iImageLayer->setPixel(j, i, 0);
 		}
 	}
-	*/
+
+	for (int k = 0; k < iImageLayer->getWidth(); k++){
+		iImageLayer->setPixel(k, topYIndex, 0);
+	}
+
+	ImageIO::saveIntensityImage(*iImageLayer, ImageIO::getDebugFileName("yHistogramLayered.png"));
+	delete iImageLayer;
+	
+	// Building the histogram into an image
+	IntensityImageStudent *iImage = new IntensityImageStudent(highestVal, image.getHeight());
 	for (int i = 0; i < iImage->getHeight(); i++){
 		for (int j = 0; j < yHistogram[i]; j++){
-			//iImage->setPixel(j, i, 0);
 			iImage->setPixel(j, i, 255);
 		}
 	}
-
-	ImageIO::saveIntensityImage(*iImage, ImageIO::getDebugFileName("histogramizzle.png"));
-		
+	ImageIO::saveIntensityImage(*iImage, ImageIO::getDebugFileName("yHistogram.png"));
+	delete iImage;
 
 	// To-do: Three histograms, one Vertical, Multiple Horizontal, set features to top, left head side and right head side
 
