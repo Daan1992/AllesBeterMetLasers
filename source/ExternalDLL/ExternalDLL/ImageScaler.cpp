@@ -1,5 +1,5 @@
 #include "ImageScaler.h"
-
+#include <iostream>
 
 ImageScaler::ImageScaler()
 {
@@ -21,6 +21,7 @@ IntensityImageStudent * ImageScaler::scaleImage(const IntensityImage &image, dou
 			pixelvalue += image.getPixel(static_cast<int>(ceil(x_source)), static_cast<int>(floor(y_source))) * (ceil(x_source) - x_source) * (y_source - floor(y_source));
 			pixelvalue += image.getPixel(static_cast<int>(ceil(x_source)), static_cast<int>(ceil(y_source))) * (ceil(x_source) - x_source) * (ceil(y_source) - y_source);
 
+			std::cout << "\nSetting pixel (" << x << "," << y << ") to value: " << pixelvalue;
 			targetImage->setPixel(x, y, static_cast<Intensity>(pixelvalue));
 		}
 	}

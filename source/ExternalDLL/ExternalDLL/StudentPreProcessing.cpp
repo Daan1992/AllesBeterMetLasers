@@ -13,7 +13,7 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 
 IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &image) const {
 	ImageScaler scaler = ImageScaler();
-	IntensityImageStudent *iImage = new IntensityImageStudent(*scaler.scaleImage(image, 2.0));
+	IntensityImageStudent *iImage = new IntensityImageStudent(*scaler.scaleImage(image, 0.4));
 	return iImage;
 }
 
