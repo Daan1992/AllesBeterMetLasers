@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">AllesBeterMetLasers Vision
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Vision-practica van Kevin Nijmeijer &amp; Daan Leijen</div>
   </td>
@@ -117,19 +117,23 @@ $(document).ready(function(){initNavTree('_student_localization_8h_source.html',
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Localization.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_student_localization.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_student_localization.html">StudentLocalization</a> :</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_localization.html">Localization</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;IntensityImageStudent.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;ImageIO.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> stepFindHead(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> stepFindNoseMouthAndChin(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> stepFindChinContours(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">bool</span> stepFindNoseEndsAndEyes(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> stepFindExactEyes(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="ttc" id="class_student_localization_html"><div class="ttname"><a href="class_student_localization.html">StudentLocalization</a></div><div class="ttdef"><b>Definition:</b> StudentLocalization.h:9</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_student_localization.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_student_localization.html">StudentLocalization</a> :</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_localization.html">Localization</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> stepFindHead(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> stepFindNoseMouthAndChin(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> stepFindChinContours(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> stepFindNoseEndsAndEyes(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> stepFindExactEyes(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;image, <a class="code" href="class_feature_map.html">FeatureMap</a> &amp;features) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="ttc" id="class_student_localization_html"><div class="ttname"><a href="class_student_localization.html">StudentLocalization</a></div><div class="ttdoc">The class responsible for locating various features used in further steps of localization and extract...</div><div class="ttdef"><b>Definition:</b> StudentLocalization.h:18</div></div>
 <div class="ttc" id="class_feature_map_html"><div class="ttname"><a href="class_feature_map.html">FeatureMap</a></div><div class="ttdef"><b>Definition:</b> FeatureMap.h:12</div></div>
 <div class="ttc" id="class_intensity_image_html"><div class="ttname"><a href="class_intensity_image.html">IntensityImage</a></div><div class="ttdef"><b>Definition:</b> IntensityImage.h:11</div></div>
 <div class="ttc" id="class_localization_html"><div class="ttname"><a href="class_localization.html">Localization</a></div><div class="ttdef"><b>Definition:</b> Localization.h:12</div></div>
@@ -139,7 +143,7 @@ $(document).ready(function(){initNavTree('_student_localization_8h_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_2c5c95ffe43b734d740fd0292969d3b4.html">ExternalDLL</a></li><li class="navelem"><a class="el" href="dir_20813b1e06386b91e7ae566e2604218f.html">ExternalDLL</a></li><li class="navelem"><b>StudentLocalization.h</b></li>
-    <li class="footer">Generated on Mon Jun 1 2015 16:26:42 for AllesBeterMetLasers Vision by
+    <li class="footer">Generated on Tue Jun 2 2015 07:51:43 for AllesBeterMetLasers Vision by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

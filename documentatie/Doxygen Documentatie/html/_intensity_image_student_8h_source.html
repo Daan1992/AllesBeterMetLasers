@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">AllesBeterMetLasers Vision
-   &#160;<span id="projectnumber">0.9</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Vision-practica van Kevin Nijmeijer &amp; Daan Leijen</div>
   </td>
@@ -121,39 +121,39 @@ $(document).ready(function(){initNavTree('_intensity_image_student_8h_source.htm
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_intensity_image_student.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a> : <span class="keyword">public</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;other);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>(<span class="keyword">const</span> <a class="code" href="class_r_g_b_image.html">RGBImage</a> &amp;<a class="code" href="struct_r_g_b.html">RGB</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    ~<a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> set(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> set(<span class="keyword">const</span> <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a> &amp;other);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> setPixel(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, Intensity pixel);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> setPixel(<span class="keywordtype">int</span> i, Intensity pixel);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Intensity getPixel(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Intensity getPixel(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::vector&lt;Intensity&gt; intensityVector;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> redConversionGrade = 0.30f;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> greenConversionGrade = 0.59f;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> blueConversionGrade = 0.11f;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_intensity_image_student.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a> : <span class="keyword">public</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>(<span class="keyword">const</span> <a class="code" href="class_intensity_image.html">IntensityImage</a> &amp;other);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>(<span class="keyword">const</span> <a class="code" href="class_r_g_b_image.html">RGBImage</a> &amp;<a class="code" href="struct_r_g_b.html">RGB</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> set(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> set(<span class="keyword">const</span> <a class="code" href="class_intensity_image_student.html">IntensityImageStudent</a> &amp;other);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> setPixel(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, Intensity pixel);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> setPixel(<span class="keywordtype">int</span> i, Intensity pixel);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Intensity getPixel(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Intensity getPixel(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::vector&lt;Intensity&gt; intensityVector;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> redConversionGrade = 0.2126f;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> greenConversionGrade = 0.7152f;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> blueConversionGrade = 1.0f - redConversionGrade - greenConversionGrade;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
 <div class="ttc" id="struct_r_g_b_html"><div class="ttname"><a href="struct_r_g_b.html">RGB</a></div><div class="ttdef"><b>Definition:</b> PixelType.h:9</div></div>
 <div class="ttc" id="class_intensity_image_html"><div class="ttname"><a href="class_intensity_image.html">IntensityImage</a></div><div class="ttdef"><b>Definition:</b> IntensityImage.h:11</div></div>
 <div class="ttc" id="class_r_g_b_image_html"><div class="ttname"><a href="class_r_g_b_image.html">RGBImage</a></div><div class="ttdef"><b>Definition:</b> RGBImage.h:11</div></div>
-<div class="ttc" id="class_intensity_image_student_html"><div class="ttname"><a href="class_intensity_image_student.html">IntensityImageStudent</a></div><div class="ttdoc">Student implementation of a class representing an IntensityImage. </div><div class="ttdef"><b>Definition:</b> IntensityImageStudent.h:16</div></div>
+<div class="ttc" id="class_intensity_image_student_html"><div class="ttname"><a href="class_intensity_image_student.html">IntensityImageStudent</a></div><div class="ttdoc">Student implementation of a class representing an IntensityImage. </div><div class="ttdef"><b>Definition:</b> IntensityImageStudent.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_2c5c95ffe43b734d740fd0292969d3b4.html">ExternalDLL</a></li><li class="navelem"><a class="el" href="dir_20813b1e06386b91e7ae566e2604218f.html">ExternalDLL</a></li><li class="navelem"><b>IntensityImageStudent.h</b></li>
-    <li class="footer">Generated on Mon Jun 1 2015 16:26:34 for AllesBeterMetLasers Vision by
+    <li class="footer">Generated on Tue Jun 2 2015 07:51:37 for AllesBeterMetLasers Vision by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
